@@ -47,12 +47,13 @@ namespace WindowsFormsEmpleado
                 else
                 {
                     MessageBox.Show("El rut ingresado no es valido porque ya existe en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    empleado.Rut = " ";
+                    txtrut.Clear();
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                MessageBox.Show(ex.Message, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El rut ingresado no es valido porque ya existe en la base de datos", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtrut.Clear();
             }
         }
 
